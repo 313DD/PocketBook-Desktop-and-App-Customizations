@@ -101,5 +101,15 @@ Please go to https://git.rustysoft.de/martin/PbDbFixer
 
 Thanks again for everyones help in this adventure :)
 
+## How to change application icons in the Pocketbook home screen
+Problem: My PocketBook (InkPad 3) allows me to change and rearrange the apps on the Home screen, but the settings are not saved. It reverts to the default apps and arrangement after reboot or after a few minutes.
+Solution: 
+1. Connect to your Pocketbook file system (usb).
+2. Find "apps.json" file in the "system/config/desktop" folder. Please, remember backup all original files before making any changes.
+Those five applications in the file are the quick links visible in the bottom section of your ereader Home screen. There can be five or less applications.
+3. Modify the file ("id":"application") according to your wishes. You find the correct "id"s from "view.json" -file in the same folder. 
+IMPORTANT: After your changes make the file read-only, so the ereader system cannot change it back to default.
+
+Note: You can also modify "view.json" -file e.g. adding other apps like KOReader aka "U_koreader" and point to that "id" in "apps.json"-file. For that you can follow jjrrw174 “PocketBook-Desktop-and-App-Customizations” instructions here in github
 
     
